@@ -18,17 +18,17 @@ namespace RetailShopApp.Domain.Services
             result.GrossPrice = amount;
             if ("userIsEmployee" == "true")
             {
-                result.discountType = DiscountType.Employee;
+                result.CustomerTypeForDiscount = CustomerType.Employee;
                 totalDiscount = (amount * 70) / 100;
             }
             else if ("userIsAffialete" == "true")
             {
-                result.discountType = DiscountType.Affiliate;
+                result.CustomerTypeForDiscount = CustomerType.Affiliate;
                 totalDiscount = (amount * 90) / 100;
             }
             else if ("userIsOldCustomer" == "true")
             {
-                result.discountType = DiscountType.OldCustomer;
+                result.CustomerTypeForDiscount = CustomerType.OldCustomer;
                 totalDiscount = (amount * 95) / 100;
             }
 

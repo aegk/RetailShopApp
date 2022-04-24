@@ -11,7 +11,7 @@ namespace RetailShopApp.Domain.Models
     {
         public decimal GrossPrice { get; set; }
         public decimal DiscountPrice { get; set;}
-        public DiscountType discountType { get; set; }
+        public CustomerType CustomerTypeForDiscount { get; set; }
         public decimal NetPrice { get; set; }
     }
 }

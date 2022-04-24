@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using RetailShopApp.Api.MiddleWare;
 using RetailShopApp.Api.viewModels.Request;
 using RetailShopApp.Api.viewModels.Response;
 using RetailShopApp.Application.Queries.Bill;
@@ -22,6 +23,7 @@ namespace RetailShopApp.Api.Controllers
             _mapper = mapper;
         }
 
+        [Authorize]
         [HttpGet]
         [ProducesResponseType(typeof(BillDiscountResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> BillDiscount([FromQuery] BillDiscountRequest request)

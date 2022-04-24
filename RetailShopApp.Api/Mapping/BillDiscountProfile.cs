@@ -10,7 +10,7 @@ namespace RetailShopApp.Api.Mapping
     {
         public BillDiscountProfile()
         {
-                CreateMap<BillDiscountRequest,BillDiscountQuery>();
+            CreateMap<BillDiscountRequest, BillDiscountQuery>();
             CreateMap<BillDto, BillDiscountResponse>();
         }
     }

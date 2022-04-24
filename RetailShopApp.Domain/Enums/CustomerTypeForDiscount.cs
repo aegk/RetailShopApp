@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RetailShopApp.Domain.Enums
 {
-    public enum DiscountType
+    public enum CustomerType
     {
         None=0,
         Employee =1,
